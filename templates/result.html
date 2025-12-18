@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>Data print</title>
+</head>
+<body>
+
+<h3>Submitted Data</h3>
+
+<table border="1">
+    {% for key, value in result.items() %}
+    <tr>
+        <th>{{ key }}</th>
+        <td>{{ value }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br><br>
+
+<!-- Excel Download Button (UTF-8 + Odia Supported) -->
+<a href="data:text/csv;charset=utf-8,%EF%BB%BF
+Field,Value%0A
+{% for key, value in result.items() %}
+{{ key }},{{ value }}%0A
+{% endfor %}"
+download="user_data.csv">
+
+    <button>Download Excel</button>
+
+</a>
+
+</body>
+</html>
