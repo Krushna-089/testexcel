@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # 🔐 Gmail credentials
 SENDER_EMAIL = "krushnacsahu2002@gmail.com"
-APP_PASSWORD = "fozb jfba bnca ygmw"
+APP_PASSWORD = "eguq bngj gzpd jrzf"
 
 def send_otp(receiver_email, otp):
     msg = MIMEText(f"Your OTP is: {otp}\n\nThis OTP is valid for 5 minutes.")
